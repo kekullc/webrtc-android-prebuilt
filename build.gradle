@@ -3,6 +3,9 @@ version '1.0.32006'
 
 apply plugin: 'maven-publish'
 
+tasks.register('assemble') {
+  println("Assemble task is a stub")
+}
 
 publishing {
   publications {
