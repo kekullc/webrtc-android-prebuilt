@@ -1,0 +1,21 @@
+group 'org.webrtc'
+version '1.0.32006'
+
+apply plugin: 'maven-publish'
+
+
+publishing {
+  publications {
+    bar(MavenPublication) {
+      groupId 'com.webrtc'
+      artifactId 'google-webrtc'
+      version '1.0.32006'
+      artifact("google-webrtc-1.0.32006.aar")
+    }
+  }
+  repositories {
+    maven {
+      url "$buildDir/repo"
+    }
+  }
+}
